@@ -40,6 +40,8 @@ namespace ConcussionTestingLab
                         line = streamData.ReadLine();
                         userObj.userName = line.Trim();
                     } // while()
+                    UserClass.userList.Add(userObj);
+
                 } // try
                 
                 catch (IOException err)
@@ -112,6 +114,7 @@ namespace ConcussionTestingLab
             userObj.userID = tbMNumber.Text;
             userObj.userName = tbName.Text;
             WriteFile(userObj.userID, userObj.userName);
+            UserClass.userList.Add(userObj);
 
             if (valid == true)
             {
