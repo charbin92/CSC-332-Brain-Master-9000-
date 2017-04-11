@@ -39,5 +39,43 @@ namespace ConcussionTestingLab
 
             frm = null;
         }
+
+        private void btnReactionTest_Click(object sender, EventArgs e)
+        {
+            //THIS event opens another form
+
+            // Hide "this" current form
+            this.Hide();
+
+            // Create a new object that will represent the next form.
+            frmReactionTimeTest frm = new frmReactionTimeTest();
+
+            // Displays the other form using its object instance
+            frm.Show();
+
+            frm = null;
+        }
+
+        private void btnConcentration_Click(object sender, EventArgs e)
+        {
+            //THIS event opens another form
+
+            // Hide "this" current form
+            this.Hide();
+
+            // Create a new object that will represent the next form.
+            frmConcentrationTest frm = new frmConcentrationTest();
+
+            // Displays the other form using its object instance
+            frm.Show();
+
+            frm = null;
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
     }
 }
