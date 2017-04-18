@@ -77,5 +77,21 @@ namespace ConcussionTestingLab
             this.Close();
             Application.Exit();
         }
+
+        private void btnAnalysis_Click(object sender, EventArgs e)
+        {
+            //THIS event opens another form
+
+            // Hide "this" current form
+            this.Hide();
+
+            // Create a new object that will represent the next form.
+            frmAnalysis frm = new frmAnalysis();
+
+            // Displays the other form using its object instance
+            frm.Show();
+
+            frm = null;
+        }
     }
 }
