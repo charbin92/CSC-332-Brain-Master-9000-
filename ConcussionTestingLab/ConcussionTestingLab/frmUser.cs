@@ -13,6 +13,8 @@ namespace ConcussionTestingLab
     public partial class frmUser : Form
     {
         UserClass.User userObj = new UserClass.User();
+        UserClass.TestScores testObj = new UserClass.TestScores();
+        public double concScore;
         public frmUser()
         {
             InitializeComponent();
