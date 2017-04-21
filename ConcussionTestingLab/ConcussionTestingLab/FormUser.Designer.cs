@@ -1,6 +1,6 @@
 ﻿namespace ConcussionTestingLab
 {
-    partial class frmUser
+    partial class FormUser
     {
         /// <summary>
         /// Required designer variable.
@@ -115,11 +115,11 @@
             this.rtbResults.TabIndex = 6;
             this.rtbResults.Text = "";
             // 
-            // frmUser
+            // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 536);
+            this.ClientSize = new System.Drawing.Size(800, 484);
             this.Controls.Add(this.rtbResults);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnAnalysis);
@@ -127,7 +127,7 @@
             this.Controls.Add(this.btnReactionTest);
             this.Controls.Add(this.btnMemoryTest);
             this.Controls.Add(this.lblUserName);
-            this.Name = "frmUser";
+            this.Name = "FormUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUser";
             this.Load += new System.EventHandler(this.frmUser_Load);

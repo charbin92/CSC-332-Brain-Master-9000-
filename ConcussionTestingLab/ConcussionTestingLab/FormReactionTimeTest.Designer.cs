@@ -1,6 +1,6 @@
 ﻿namespace ConcussionTestingLab
 {
-    partial class frmMemoryTest
+    partial class FormReactionTimeTest
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "frmMemoryTest";
+            this.Text = "frmReactionTimeTest";
         }
 
         #endregion

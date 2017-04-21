@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace ConcussionTestingLab
 {
-    public partial class frmSignIn : Form
+    public partial class FormSignIn : Form
     {
         public static bool valid = false;
-        public frmSignIn()
+        public FormSignIn()
         {
             InitializeComponent();
         }
@@ -124,7 +124,7 @@ namespace ConcussionTestingLab
                 this.Hide();
 
                 // Create a new object that will represent the next form.
-                frmUser frm = new frmUser();
+                FormUser frm = new FormUser();
 
                 // Displays the other form using its object instance
                 frm.Show();
@@ -149,7 +149,7 @@ namespace ConcussionTestingLab
                 this.Hide();
 
                 // Create a new object that will represent the next form.
-                frmUser frm = new frmUser();
+                FormUser frm = new FormUser();
 
                 // Displays the other form using its object instance
                 frm.Show();

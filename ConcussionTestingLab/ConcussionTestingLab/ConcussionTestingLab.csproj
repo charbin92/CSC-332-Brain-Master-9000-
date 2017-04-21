@@ -46,56 +46,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAnalysis.cs">
+    <Compile Include="FormAnalysis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAnalysis.Designer.cs">
-      <DependentUpon>frmAnalysis.cs</DependentUpon>
+    <Compile Include="FormAnalysis.Designer.cs">
+      <DependentUpon>FormAnalysis.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConcentrationTest.cs">
+    <Compile Include="FormConcentrationTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConcentrationTest.Designer.cs">
-      <DependentUpon>frmConcentrationTest.cs</DependentUpon>
+    <Compile Include="FormConcentrationTest.Designer.cs">
+      <DependentUpon>FormConcentrationTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMemoryTest.cs">
+    <Compile Include="FormMemoryTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMemoryTest.Designer.cs">
-      <DependentUpon>frmMemoryTest.cs</DependentUpon>
+    <Compile Include="FormMemoryTest.Designer.cs">
+      <DependentUpon>FormMemoryTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReactionTimeTest.cs">
+    <Compile Include="FormReactionTimeTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReactionTimeTest.Designer.cs">
-      <DependentUpon>frmReactionTimeTest.cs</DependentUpon>
+    <Compile Include="FormReactionTimeTest.Designer.cs">
+      <DependentUpon>FormReactionTimeTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSignIn.cs">
+    <Compile Include="FormSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSignIn.Designer.cs">
-      <DependentUpon>frmSignIn.cs</DependentUpon>
+    <Compile Include="FormSignIn.Designer.cs">
+      <DependentUpon>FormSignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUser.cs">
+    <Compile Include="FormUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUser.Designer.cs">
-      <DependentUpon>frmUser.cs</DependentUpon>
+    <Compile Include="FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserClass.cs" />
-    <EmbeddedResource Include="frmAnalysis.resx">
-      <DependentUpon>frmAnalysis.cs</DependentUpon>
+    <EmbeddedResource Include="FormAnalysis.resx">
+      <DependentUpon>FormAnalysis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConcentrationTest.resx">
-      <DependentUpon>frmConcentrationTest.cs</DependentUpon>
+    <EmbeddedResource Include="FormConcentrationTest.resx">
+      <DependentUpon>FormConcentrationTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSignIn.resx">
-      <DependentUpon>frmSignIn.cs</DependentUpon>
+    <EmbeddedResource Include="FormMemoryTest.resx">
+      <DependentUpon>FormMemoryTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUser.resx">
-      <DependentUpon>frmUser.cs</DependentUpon>
+    <EmbeddedResource Include="FormSignIn.resx">
+      <DependentUpon>FormSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

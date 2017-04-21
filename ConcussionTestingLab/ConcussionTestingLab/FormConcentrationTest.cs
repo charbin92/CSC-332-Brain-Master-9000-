@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace ConcussionTestingLab
 {
-    public partial class frmConcentrationTest : Form
+    public partial class FormConcentrationTest : Form
     {
         string[] word = {"Black", "Red", "Yellow", "Green", "Purple"};
         Color[] wordColor = {Color.Black, Color.Red, Color.Yellow, Color.Green, Color.Purple};
         bool valid = false;
 
-        public frmConcentrationTest()
+        public FormConcentrationTest()
         {
             InitializeComponent();
             label2.Visible = false;
@@ -248,7 +248,7 @@ namespace ConcussionTestingLab
                     this.Hide();
 
                     // Create a new object that will represent the next form.
-                    frmUser frm = new frmUser();
+                    FormUser frm = new FormUser();
 
                     // Displays the other form using its object instance
                     frm.Show();

@@ -1,6 +1,6 @@
 ﻿namespace ConcussionTestingLab
 {
-    partial class frmReactionTimeTest
+    partial class FormAnalysis
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmAnalysis
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "frmReactionTimeTest";
+            this.ClientSize = new System.Drawing.Size(778, 465);
+            this.Name = "frmAnalysis";
+            this.Text = "frmAnalysis";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

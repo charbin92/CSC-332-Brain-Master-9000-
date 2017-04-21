@@ -1,6 +1,6 @@
 ﻿namespace ConcussionTestingLab
 {
-    partial class frmConcentrationTest
+    partial class FormConcentrationTest
     {
         /// <summary>
         /// Required designer variable.

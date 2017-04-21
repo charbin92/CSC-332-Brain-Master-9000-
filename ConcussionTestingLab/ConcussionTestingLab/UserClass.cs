@@ -31,8 +31,18 @@ namespace ConcussionTestingLab
             public double score;
         } // ConcentrationTest
 
+        public class MemoryTest
+        {
+            public double timeSpent;
+            public int correctAnswers;
+            public int wrongAnswers;
+            public int totalAnswers;
+            public double score;
+        } // MemoryTest
+
         public static List<User> userList = new List<User>();
         public static List<TestScores> testScoreList = new List<TestScores>();
         public static List<ConcentrationTest> concentrationList = new List<ConcentrationTest>();
+        public static List<MemoryTest> memoryList = new List<MemoryTest>();
     }
 }
