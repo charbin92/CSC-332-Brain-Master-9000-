@@ -303,7 +303,7 @@ namespace ConcussionTestingLab
 
             else
             {
-                MessageBox.Show("This Data already Exist!");
+                MessageBox.Show("This Data already Exists!");
                 valid = false;
             } // else
         } // saveScores()
