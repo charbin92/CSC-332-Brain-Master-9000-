@@ -1,6 +1,6 @@
 ﻿namespace ConcussionTestingLab
 {
-    partial class frmSignIn
+    partial class FormSignIn
     {
         /// <summary>
         /// Required designer variable.

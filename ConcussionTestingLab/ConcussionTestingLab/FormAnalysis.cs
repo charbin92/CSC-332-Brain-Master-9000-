@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ConcussionTestingLab
 {
-    public partial class frmReactionTimeTest : Form
+    public partial class FormAnalysis : Form
     {
-        public frmReactionTimeTest()
+        public FormAnalysis()
         {
             InitializeComponent();
         }

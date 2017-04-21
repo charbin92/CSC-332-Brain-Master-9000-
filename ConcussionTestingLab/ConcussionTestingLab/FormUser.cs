@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace ConcussionTestingLab
 {
-    public partial class frmUser : Form
+    public partial class FormUser : Form
     {
         UserClass.User userObj = new UserClass.User();
         UserClass.TestScores testObj = new UserClass.TestScores();
         public double concScore;
-        public frmUser()
+        public FormUser()
         {
             InitializeComponent();
             //lblUserName.Text = userObj.userName;
@@ -34,7 +34,7 @@ namespace ConcussionTestingLab
             this.Hide();
 
             // Create a new object that will represent the next form.
-            frmMemoryTest frm = new frmMemoryTest();
+            FormMemoryTest frm = new FormMemoryTest();
 
             // Displays the other form using its object instance
             frm.Show();
@@ -50,7 +50,7 @@ namespace ConcussionTestingLab
             this.Hide();
 
             // Create a new object that will represent the next form.
-            frmReactionTimeTest frm = new frmReactionTimeTest();
+            FormReactionTimeTest frm = new FormReactionTimeTest();
 
             // Displays the other form using its object instance
             frm.Show();
@@ -66,7 +66,7 @@ namespace ConcussionTestingLab
             this.Hide();
 
             // Create a new object that will represent the next form.
-            frmConcentrationTest frm = new frmConcentrationTest();
+            FormConcentrationTest frm = new FormConcentrationTest();
 
             // Displays the other form using its object instance
             frm.Show();
@@ -88,7 +88,7 @@ namespace ConcussionTestingLab
             this.Hide();
 
             // Create a new object that will represent the next form.
-            frmAnalysis frm = new frmAnalysis();
+            FormAnalysis frm = new FormAnalysis();
 
             // Displays the other form using its object instance
             frm.Show();
