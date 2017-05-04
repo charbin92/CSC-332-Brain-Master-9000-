@@ -243,17 +243,7 @@ namespace ConcussionTestingLab
                 isCorrect = false;
             }
 
-            // show message box
-            // Cody: Maybe take this out so it doesn't display everytime.
-            //string msg = "";
-            //if (isCorrect)
-            //{
-            //    msg += "CORRECT (" + correctKey.ToString() + ")";
-            //}
-            //else
-            //{
-            //    msg += "WRONG (" + wrongKey.ToString() + ")";
-            //}
+            
         } // getReaction()
 
         private void saveDataToList()
@@ -316,23 +306,22 @@ namespace ConcussionTestingLab
                 valid = false;
             } //else
 
-            if (valid == true)
-            {
-                //This event opens another form
+            
+            //This event opens another form
 
-                //Hide "this" current form
-                this.Hide();
+            //Hide "this" current form
+            this.Hide();
 
-                //Create a new object that will represent the next form.
+            //Create a new object that will represent the next form.
 
-                FormUser frm = new FormUser();
+            FormUser frm = new FormUser();
 
-                //Displays the other form using its object instance
+            //Displays the other form using its object instance
 
-                frm.Show();
+            frm.Show();
 
-                frm = null;
-            }
+            frm = null;
+            
         } // submitData()
 
         

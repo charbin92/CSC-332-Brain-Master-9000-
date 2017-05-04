@@ -44,7 +44,6 @@
             this.pnlInstructions2 = new System.Windows.Forms.Panel();
             this.btnNext = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
             this.pnlInstructions.SuspendLayout();
             this.pnlWords.SuspendLayout();
             this.pnlYesNo.SuspendLayout();
@@ -212,23 +211,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Next you will be asked to remember what words were shown.";
             // 
-            // btnSubmit
-            // 
-            this.btnSubmit.Location = new System.Drawing.Point(16, 368);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(100, 28);
-            this.btnSubmit.TabIndex = 10;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
             // FormMemoryTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 411);
-            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.pnlWords);
             this.Controls.Add(this.pnlInstructions2);
             this.Controls.Add(this.pnlYesNo);
@@ -266,6 +253,5 @@
         private System.Windows.Forms.Panel pnlInstructions2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Button btnSubmit;
     }
 }

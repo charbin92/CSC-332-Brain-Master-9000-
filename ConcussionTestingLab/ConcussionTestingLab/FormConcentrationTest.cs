@@ -30,6 +30,8 @@ namespace ConcussionTestingLab
         int correct = 0, wrong = 0;
         DateTime starttime, endtime;
         double duration = 0;
+        int totalAnswers;
+        double score;
         UserClass.ConcentrationTest objCTest = new UserClass.ConcentrationTest();
 
         private void WordStart()
@@ -76,6 +78,7 @@ namespace ConcussionTestingLab
             else
                 lblChoice.Text = "Color";
         } // WordStart()
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (button1.Text == "Start")
@@ -95,19 +98,21 @@ namespace ConcussionTestingLab
                 if ((correct + wrong) == 0)
                     label9.Text = "0";
                 else
-                    label9.Text = ((double)correct * 100 / (correct + wrong)).ToString("F0");
+                {
+                    score = ((double)correct * 100 / ((double)totalAnswers));
+                    label9.Text = score.ToString("F0");
+                }
                 endtime = DateTime.Now;
                 duration = (endtime-starttime).TotalMinutes * 60 + (endtime-starttime).TotalSeconds;
                 label11.Visible = true;
                 label11.Text= duration.ToString("F0")+" seconds";
-                
+
                 objCTest.correctAnswer = correct;
                 objCTest.wrongAnswer = wrong;
-                objCTest.totalAnswer = correct + wrong;
+                objCTest.totalAnswer = totalAnswers;
                 objCTest.timeSpent = duration;
-                objCTest.score = Convert.ToDouble(label9.Text);
-                
-            }
+                objCTest.score = Convert.ToDouble(score);
+            } // else
         } // button1_Click()
 
         private void label5_Click(object sender, EventArgs e)
@@ -119,10 +124,12 @@ namespace ConcussionTestingLab
                     if (label2.Text == label5.Text)
                     {
                         correct++;
+                        totalAnswers++;
                     }
                     else
                     {
                         wrong++;
+                        totalAnswers++;
                     }
                 }
                 if (lblChoice.Text == "Color")
@@ -141,13 +148,19 @@ namespace ConcussionTestingLab
                     if (w == col)
                     {
                         correct++;
+                        totalAnswers++;
                     }
                     else
                     {
                         wrong++;
+                        totalAnswers++;
                     }
-                }
-                WordStart();
+                } // endif
+
+                if (totalAnswers < 15)
+                    WordStart();
+                else
+                    saveAllData();
             }
         } // label5_Click()
 
@@ -160,10 +173,12 @@ namespace ConcussionTestingLab
                     if (label2.Text == label4.Text)
                     {
                         correct++;
+                        totalAnswers++;
                     }
                     else
                     {
                         wrong++;
+                        totalAnswers++;
                     }
                 }
                 if (lblChoice.Text == "Color")
@@ -182,13 +197,19 @@ namespace ConcussionTestingLab
                     if (w == col)
                     {
                         correct++;
+                        totalAnswers++;
                     }
                     else
                     {
                         wrong++;
+                        totalAnswers++;
                     }
                 }
-                WordStart();
+
+                if (totalAnswers < 15)
+                    WordStart();
+                else
+                    saveAllData();
             }
         } // label4_Click()
 
@@ -201,10 +222,12 @@ namespace ConcussionTestingLab
                     if (label2.Text == label6.Text)
                     {
                         correct++;
+                        totalAnswers++;
                     }
                     else
                     {
                         wrong++;
+                        totalAnswers++;
                     }
                 }
                 if (lblChoice.Text == "Color")
@@ -223,13 +246,19 @@ namespace ConcussionTestingLab
                     if (w == col)
                     {
                         correct++;
+                        totalAnswers++;
                     }
                     else
                     {
                         wrong++;
+                        totalAnswers++;
                     }
                 }
-                WordStart();
+
+                if (totalAnswers < 15)
+                    WordStart();
+                else
+                    saveAllData();
             }
         } //label6_Click()
 
@@ -317,10 +346,12 @@ namespace ConcussionTestingLab
                     if (label2.Text == label7.Text)
                     {
                         correct++;
+                        totalAnswers++;
                     }
                     else
                     {
                         wrong++;
+                        totalAnswers++;
                     }
                 }
                 if (lblChoice.Text == "Color")
@@ -339,13 +370,19 @@ namespace ConcussionTestingLab
                     if (w == col)
                     {
                         correct++;
+                        totalAnswers++;
                     }
                     else
                     {
                         wrong++;
+                        totalAnswers++;
                     }
                 }
-                WordStart();
+
+                if (totalAnswers < 15)
+                    WordStart();
+                else
+                    saveAllData();
             }
         } //label7_Click()
 
@@ -358,10 +395,12 @@ namespace ConcussionTestingLab
                     if (label2.Text == label3.Text)
                     {
                         correct++;
+                        totalAnswers++;
                     }
                     else
                     {
                         wrong++;
+                        totalAnswers++;
                     }
                 }
                 if (lblChoice.Text == "Color")
@@ -380,14 +419,63 @@ namespace ConcussionTestingLab
                     if (w == col)
                     {
                         correct++;
+                        totalAnswers++;
                     }
                     else
                     {
                         wrong++;
+                        totalAnswers++;
                     }
                 }
-                WordStart();
+
+                if (totalAnswers < 15)
+                    WordStart();
+                else
+                    saveAllData();
             }
         } //label3_Click()
+
+        private void saveAllData()
+        {
+            endtime = DateTime.Now;
+            duration = (endtime - starttime).TotalMinutes * 60 + (endtime - starttime).TotalSeconds;
+            score = ((double)correct * 100 / ((double)totalAnswers));
+            string msg = "Finished!" + "\r\n";
+            msg += "Total Correct: ";
+            msg += correct.ToString() + "\r\n";
+            msg += "Total Incorrect: ";
+            msg += wrong.ToString() + "\r\n";
+            msg += "Total Questions Asked: ";
+            msg += totalAnswers.ToString() + "\r\n";
+            msg += "Time Spent: ";
+            msg += duration.ToString("F2") + " seconds" + "\r\n";
+            msg += "Score: ";
+            msg += score.ToString("F2");
+            MessageBox.Show(msg);
+
+            objCTest.correctAnswer = correct;
+            objCTest.wrongAnswer = wrong;
+            objCTest.totalAnswer = totalAnswers;
+            objCTest.timeSpent = duration;
+            objCTest.score = Convert.ToDouble(score);
+
+            UserClass.concentrationList.Add(objCTest);
+            saveScores();
+
+
+            //THIS event opens another form
+
+            // Hide "this" current form
+            this.Hide();
+
+            // Create a new object that will represent the next form.
+            FormUser frm = new FormUser();
+
+            // Displays the other form using its object instance
+            frm.Show();
+
+            frm = null;
+        } // saveAllData()
+
     } // Form
 }
