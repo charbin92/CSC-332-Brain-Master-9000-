@@ -94,6 +94,9 @@
     <EmbeddedResource Include="FormMemoryTest.resx">
       <DependentUpon>FormMemoryTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReactionTimeTest.resx">
+      <DependentUpon>FormReactionTimeTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSignIn.resx">
       <DependentUpon>FormSignIn.cs</DependentUpon>
     </EmbeddedResource>
