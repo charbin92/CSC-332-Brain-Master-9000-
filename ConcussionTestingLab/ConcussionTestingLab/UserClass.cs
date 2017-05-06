@@ -47,7 +47,6 @@ namespace ConcussionTestingLab
             public int correctAnswer;
             public int wrongAnswer;
             public int totalAnswer;
-
         }
 
         public class TimeTest

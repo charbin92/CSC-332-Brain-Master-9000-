@@ -166,7 +166,8 @@ namespace ConcussionTestingLab
                           + "(" + wrongKey.ToString() + " wrong and " + correctKey.ToString() + " correct)"
                           + Environment.NewLine + "  -Time Spent: " + (timespent / (double)1000).ToString("F4") + " second(s)"
                           + Environment.NewLine + "  -Avg Time: " + (avgTime / (double)1000).ToString("F4") + " second(s)"
-                          + Environment.NewLine + "  -Total Time: " + (totalTime / 1000).ToString() + " second(s)";
+                          + Environment.NewLine + "  -Total Time: " + (totalTime / 1000).ToString() + " second(s)"
+                          + Environment.NewLine + "  -Score: " + score.ToString("F2");
                 MessageBox.Show(msg);
                 timerSpeed.Stop();
                 saveDataToList();

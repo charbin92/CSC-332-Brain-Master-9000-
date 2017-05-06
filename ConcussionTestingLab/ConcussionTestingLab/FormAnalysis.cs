@@ -15,6 +15,7 @@ namespace ConcussionTestingLab
         public FormAnalysis()
         {
             InitializeComponent();
+            chart1.Series[0].Points[0].SetValueY(25);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace ConcussionTestingLab
         private static void ReadFile(string ID, string name)
         {
             string line = "x";
-            //string[] arrayField;
+            string[] arrayField;
             TextReader streamData = null;
             string file = "../../Data/" + ID + "_" + name; // will store the file name as M#_Name.dat
             UserClass.User userObj = new UserClass.User();
@@ -39,6 +39,19 @@ namespace ConcussionTestingLab
                         userObj.userID = line.Trim();
                         line = streamData.ReadLine();
                         userObj.userName = line.Trim();
+                        while(streamData.Peek() > -1)
+                        {
+                            UserClass.TestScores testObj = new UserClass.TestScores();
+                            line = streamData.ReadLine();
+                            if(line == "")
+                                line = streamData.ReadLine();
+                            arrayField = line.Split(' ');
+                            testObj.curDate = Convert.ToDateTime(arrayField[0]);
+                            testObj.concentrationScore = Convert.ToDouble(arrayField[1]);
+                            testObj.memoryScore = Convert.ToDouble(arrayField[2]);
+                            testObj.reactionTimeScore = Convert.ToDouble(arrayField[3]);
+                            UserClass.testScoreList.Add(testObj);
+                        } // while()
                     } // while()
                     UserClass.userList.Add(userObj);
 
