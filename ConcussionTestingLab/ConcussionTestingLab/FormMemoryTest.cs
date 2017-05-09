@@ -38,6 +38,7 @@ namespace ConcussionTestingLab
         {
             pnlInstructions.Visible = false;
             pnlWords.Visible = true;
+            lblwordList.Text = "";
 
             for (int i = 0; i < wordArr.Length; i++)
             {
@@ -95,6 +96,7 @@ namespace ConcussionTestingLab
                 msg += score.ToString("F2");
                 MessageBox.Show(msg);
                 collectData();
+                submitData();
             }
         }
 
@@ -132,6 +134,7 @@ namespace ConcussionTestingLab
                 msg += score.ToString("F2");
                 MessageBox.Show(msg);
                 collectData();
+                submitData();
             }
         }
 
@@ -212,27 +215,25 @@ namespace ConcussionTestingLab
             } //else
         } //saveScore()
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void submitData()
         {
             UserClass.memoryList.Add(memoryTestObj);
             saveScores();
-            if (valid == true)
-            {
-                //This event opens another form
+            //This event opens another form
 
-                //Hide "this" current form
-                this.Hide();
+            //Hide "this" current form
+            this.Hide();
 
-                //Create a new object that will represent the next form.
+            //Create a new object that will represent the next form.
 
-                FormUser frm = new FormUser();
+            FormUser frm = new FormUser();
 
-                //Displays the other form using its object instance
+            //Displays the other form using its object instance
 
-                frm.Show();
+            frm.Show();
 
-                frm = null;
-            }
-        }
+            frm = null;
+            
+        } // submitData()
     }
 }
