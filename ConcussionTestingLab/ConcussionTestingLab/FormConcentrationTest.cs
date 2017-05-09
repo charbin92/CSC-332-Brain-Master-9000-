@@ -25,6 +25,11 @@ namespace ConcussionTestingLab
             label9.Visible = false;
             label11.Visible = false;
             lblChoice.Visible = false;
+            MessageBox.Show("You will be asked to either \r\n"
+                + "Click on the Word that matches the Word \r\n"
+                + "asked at the top or, the text Color that \r\n"
+                + "matches the Color at the top.");
+            
         }
 
         int correct = 0, wrong = 0;
@@ -385,6 +390,12 @@ namespace ConcussionTestingLab
                     saveAllData();
             }
         } //label7_Click()
+
+        private void FormConcentrationTest_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Click Start to Begin!");
+
+        }
 
         private void label3_Click(object sender, EventArgs e)
         {

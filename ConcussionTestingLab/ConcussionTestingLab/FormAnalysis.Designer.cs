@@ -47,6 +47,7 @@
             this.btnLoadData1 = new System.Windows.Forms.Button();
             this.btnLoadData2 = new System.Windows.Forms.Button();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
@@ -102,7 +103,7 @@
             // 
             this.btnLoadData1.AutoSize = true;
             this.btnLoadData1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadData1.Location = new System.Drawing.Point(203, 56);
+            this.btnLoadData1.Location = new System.Drawing.Point(168, 89);
             this.btnLoadData1.Name = "btnLoadData1";
             this.btnLoadData1.Size = new System.Drawing.Size(121, 30);
             this.btnLoadData1.TabIndex = 2;
@@ -114,7 +115,7 @@
             // 
             this.btnLoadData2.AutoSize = true;
             this.btnLoadData2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadData2.Location = new System.Drawing.Point(785, 56);
+            this.btnLoadData2.Location = new System.Drawing.Point(776, 89);
             this.btnLoadData2.Name = "btnLoadData2";
             this.btnLoadData2.Size = new System.Drawing.Size(121, 30);
             this.btnLoadData2.TabIndex = 3;
@@ -151,18 +152,30 @@
             this.chart2.TabIndex = 4;
             this.chart2.Text = "chart2";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(951, 24);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Please click the load Graph Buttons to display Data on Graph. Click the Go Back b" +
+    "utton to return to the User Page.";
+            // 
             // FormAnalysis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 516);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.btnLoadData2);
             this.Controls.Add(this.btnLoadData1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.chart1);
             this.Name = "FormAnalysis";
-            this.Text = "frmAnalysis";
+            this.Text = "Analysis";
             this.Load += new System.EventHandler(this.FormAnalysis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
@@ -178,5 +191,6 @@
         private System.Windows.Forms.Button btnLoadData1;
         private System.Windows.Forms.Button btnLoadData2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.Label label1;
     }
 }
